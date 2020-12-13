@@ -15,15 +15,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
 
     <!-- Add the script and css file under here -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js" defer></script>
 
   </head>
   <body>
       
     <?
         include "nav.php";
-
+        
+        echo "<main>";
         get_content();
-
+        echo "</main>";
 
         include "footer.php";
     ?>
