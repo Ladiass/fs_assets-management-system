@@ -1,0 +1,69 @@
+Asset Management system 
+Users
+    Admin
+        -Add user
+        -View users
+        -delete users
+        -add asset
+        -edit asset
+        -delete asset
+        -activate/ deactivate an asset
+        -view all asset request
+        -accept asset request
+        -decline asset request
+        -view all return request
+        -accept return request
+        -deciline return request
+    Employee
+        -view all asset
+        -request to borrow an asset
+        -cancel borrowed asset if its still pending.
+        -return asset
+        -change password
+
+Data Model
+    assets
+        -name
+        -quantity
+        -isActive
+        -category
+    users 
+        -username
+        -firstname
+        -lastname
+        -password
+        -isAdmin
+    requests
+        -username
+        -item_name
+        -quantity_borrowed
+        -date
+        -status
+    returns
+        -username
+        -item_name
+        -quantity_borrowed
+        -date
+        -status
+
+Validations:
+    -item should have a name , quantity
+    -user should have a username ,password , isAdmin
+    -login vvalidate the username and password
+    -Quantity request should not exceed quantity available
+    -if the quantity is 0 it cannnot be activated unless theres an available quantity
+    -only Admin can add a users
+    -if you're an admin you should be able to see all request
+    -if you're an employee you should just see your own requests
+
+
+
+Must be hosted.
+
+!we need to create a powerpoint presentatin discussing what is your project all about.
+!WHATS OUR PROJECT
+!Statement of the problem ( What , WHY , HOW )
+
+
+
+!!dec 18th present maybe afternoon
