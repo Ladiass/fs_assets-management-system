@@ -13,3 +13,45 @@ html,body{
 main{
     min-height: 100%;
 }
+.navbtn{
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px;
+}
+.nav-animate{
+    display: none;
+    width: 50px;
+    border-radius: 30%;
+}
+.nav-animate>a{
+    overflow: hidden;
+}
+.navbtn:hover .nav-animate{
+    display: block;
+    transition: 1s;
+    position: absolute;
+    background-color: aqua;
+}
+.nav-a:hover,.nav-animate {
+    width: auto;
+    animation: ahover .5s;
+}
+
+@keyframes ahover{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: auto;
+    }
+
+}
