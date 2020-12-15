@@ -9,8 +9,8 @@
             <thead>
                 <tr>
                     <td>Index</td>
-                    <td>Item Name</td>
                     <td>Code</td>
+                    <td>Item Name</td>
                     <td>Quantity</td>
                     <td>Actions</td>
                 </tr>
