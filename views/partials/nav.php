@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div> -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div id="page-content-wrapper">
                 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
             </div>
@@ -51,7 +51,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse pl-auto" id="navbarNav">
-                <ul class="navbar-nav w-100 mr-5">
+                <!-- <ul class="navbar-nav w-100 mr-5">
                     <li class="nav-item ml-auto mr-5">
                         <a class="nav-link text-white" href="#">Home</a>
                     </li>
@@ -64,11 +64,11 @@
                     <li class="nav-item mr-5">
                         <a class="nav-link text-white" href="#">Log Out</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </nav>
         <!-- /#page-content-wrapper -->
-        
+
 
     </div>
     <!-- /#wrapper -->
