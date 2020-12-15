@@ -52,7 +52,22 @@
             </button>
             <div class="collapse navbar-collapse pl-auto" id="navbarNav">
                 <ul class="navbar-nav w-100 mr-5 bg-dark">
+<<<<<<< HEAD
                     
+=======
+                    <li class="nav-item ml-auto mr-5">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white" href="#">Register User</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white" href="#">User</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white" href="#">Log Out</a>
+                    </li>
+>>>>>>> b59e2b0bd1fe52f749730ae1ef84704a046f0686
                 </ul>
             </div>
         </nav>
