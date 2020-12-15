@@ -3,7 +3,10 @@
     include "controllers/data.get.php";
     
     $title = "Home";
-    
+    // if(!isset($_SESSION["user_details"])){
+    //     header("Location: /views/forms/login.php");
+    //     die();
+    // }
     function get_content(){
     $items = get_item("data/items.json");
         ?>
