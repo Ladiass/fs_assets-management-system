@@ -52,18 +52,7 @@
             </button>
             <div class="collapse navbar-collapse pl-auto" id="navbarNav">
                 <ul class="navbar-nav w-100 mr-5 bg-dark">
-                    <li class="nav-item ml-auto mr-5">
-                        <a class="nav-link text-white" href="#">Home</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link text-white" href="#">Register User</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link text-white" href="#">User</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link text-white" href="/controllers/system.logout.php">Log Out</a>
-                    </li>
+                    
                 </ul>
             </div>
         </nav>
