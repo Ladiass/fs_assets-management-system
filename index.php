@@ -40,7 +40,7 @@
                         <td>
                             <div class="row justify-content-around">
                                 <?php
-                                    if(!$_SESSION['user_details']->isAdmin){
+                                    if(!isset($_SESSION['user_details']->isAdmin)){
                                 ?>
                                 <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary") ?>">
                                     <?php $asset->isActive ? print("Active") : print("Inactive") ?>

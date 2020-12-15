@@ -24,7 +24,6 @@ function get_content() {
     </div>
 </div>
 
-
 <?php 
 	}
 	require_once '../partials/layout.php';
