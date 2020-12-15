@@ -34,7 +34,7 @@
                                 <?php
                                     if(!$_SESSION['user_details']->isAdmin){
                                 ?>
-                                <a href="/controllers/asset_process/asset_isActive_process.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary") ?>">
+                                <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary") ?>">
                                     <?php $asset->isActive ? print("Active") : print("Inactive") ?>
                                 </a>
                                 <form action="" class="">
@@ -44,11 +44,11 @@
                                     }else{
                                         ?>
                                         <a href="/views/forms/edit_asset.php?id=<?php echo $i ?>" class="btn btn-warning mb-2 mb-md-0">Edit</a>
-                                        <a href="/controllers/asset_process/asset_delete_process.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
+                                        <a href="/controllers/asset_process/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
                                 <?php
                                 }
                             ?>
-                            
+
                             </div>
                         </td>
                     </tr>
