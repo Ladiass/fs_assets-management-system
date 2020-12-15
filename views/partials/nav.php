@@ -51,7 +51,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse pl-auto" id="navbarNav">
-                <ul class="navbar-nav w-100 mr-5">
+                <ul class="navbar-nav w-100 mr-5 bg-dark">
                     <li class="nav-item ml-auto mr-5">
                         <a class="nav-link text-white" href="#">Home</a>
                     </li>
