@@ -1,6 +1,11 @@
 <?php
+    session_start();
+    include "controllers/data.get.php";
+    
     $title = "Home";
+    
     function get_content(){
+    $items = get_item("data/items.json");
         ?>
     
     <div class="container py-5">
@@ -16,7 +21,9 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($assets as $i => $asset): ?>
+                <?php 
+                foreach($items as $i => $asset): 
+                ?>
                     <tr>
                         <td><?php echo $i + 1; ?></td>
                         <td><?php echo $asset->name; ?></td>
