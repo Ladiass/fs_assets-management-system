@@ -62,7 +62,7 @@
                         <a class="nav-link text-white" href="#">User</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link text-white" href="/controllers/system.logout.php">Log Out</a>
+                        <a class="nav-link text-white" href="#">Log Out</a>
                     </li>
                 </ul>
             </div>

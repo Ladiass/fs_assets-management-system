@@ -52,7 +52,7 @@
                                     }else{
                                         ?>
                                         <a href="/views/forms/edit_asset.php?id=<?php echo $i ?>" class="btn btn-warning mb-2 mb-md-0">Edit</a>
-                                        <a href="/controllers/asset_process/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
+                                        <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
                                 <?php
                                 }
                             ?>
