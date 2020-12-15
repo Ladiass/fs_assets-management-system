@@ -5,4 +5,4 @@
     $url = "../data/items.json";
     $items = get_item("");
 
-    
+    header("Location: /".$_SERVER["HTTP_REFERER"]);
