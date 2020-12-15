@@ -3,6 +3,11 @@
     include "controllers/data.get.php";
     
     $title = "Home";
+
+    if(!isset($_COOKIE["welcome"])){
+        header("Location: /views/forms/welcome.php");
+        die();
+    }
     // if(!isset($_SESSION["user_details"])){
     //     header("Location: /views/forms/login.php");
     //     die();
