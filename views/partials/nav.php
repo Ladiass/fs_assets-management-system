@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div> -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div id="page-content-wrapper">
                 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
             </div>

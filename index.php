@@ -18,7 +18,7 @@
             <tbody>
                 <?php foreach($assets as $i => $asset): ?>
                     <tr>
-                        <td>#<?php echo $i + 1; ?></td>
+                        <td><?php echo $i + 1; ?></td>
                         <td><?php echo $asset->name; ?></td>
                         <td><?php echo $asset->category; ?></td>
                         <td><?php echo $asset->quantity; ?></td>
