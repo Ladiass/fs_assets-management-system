@@ -1,7 +1,8 @@
 <?php
-    // session_start();
-    include "controllers/data.get.php";
-    
+    require_once "controllers/data.get.php";
+    session_start();
+
+
     $title = "Home";
 
     if(!isset($_COOKIE["welcome"])){
@@ -15,17 +16,17 @@
     function get_content(){
     $items = get_item("data/items.json");
         ?>
-    
+   
     <div class="container py-5">
     <div class="table-responsive-sm">
         <table class="table table-hover text-center">
             <thead>
                 <tr>
-                    <td>Index</td>
-                    <td>Code</td>
-                    <td>Item Name</td>
-                    <td>Quantity</td>
-                    <td>Actions</td>
+                    <td class="text-white">Index</td>
+                    <td class="text-white">Code</td>
+                    <td class="text-white">Item Name</td>
+                    <td class="text-white">Quantity</td>
+                    <td class="text-white">Actions</td>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +40,7 @@
                         <td><?php echo $asset->quantity; ?></td>
                         <td>
                             <div class="row justify-content-around">
-                                <?php
+                                 <?php
                                     if(!$_SESSION['user_details']->isAdmin){
                                 ?>
                                 <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary") ?>">

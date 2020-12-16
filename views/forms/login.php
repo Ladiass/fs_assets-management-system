@@ -1,13 +1,4 @@
-<?php 
-session_start();
-$title = "Login";
-if(isset($_SESSION['user_details'])){
-    header("Location: /");
-}
-function get_content() {
-?>
-
-	<div class="container">
+<div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -23,8 +14,3 @@ function get_content() {
         </div>
     </div>
 </div>
-
-<?php 
-	}
-	require_once '../partials/layout.php';
-?>

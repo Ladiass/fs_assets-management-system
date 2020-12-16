@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  // session_start();
   // if(!isset($_SESSION["user_details"])){
   //   header("Location: /views/forms/login.php");
   //   die();
@@ -43,8 +43,6 @@
     echo "</main>";
 
     include "footer.php";
-
-
 ?>
     
   </body>

@@ -1,9 +1,4 @@
-<?php 
-$title = "Login";
-function get_content() {
-?>
-
-	<div class="container">
+<div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -21,9 +16,3 @@ function get_content() {
         </div>
     </div>
 </div>
-
-
-<?php 
-	}
-	require_once '../partials/layout.php';
-?>
