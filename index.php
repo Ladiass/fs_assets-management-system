@@ -15,7 +15,6 @@
     function get_content(){
     $items = get_item("data/items.json");
         ?>
-    <script src="/assets/js/main.js" defer></script>
 
     <div class="container py-5">
     <div class="table-responsive-sm">
@@ -35,7 +34,7 @@
                 foreach($items as $i => $asset): 
                 ?>
                     <tr >
-                        <td><?php echo $count + 1; ?></td>
+                        <td><?php echo $i+1; ?></td>
                         <td><?php echo $asset->name; ?></td>
                         <td><?php echo $asset->category; ?></td>
                         <td><?php echo $asset->quantity; ?></td>
@@ -53,7 +52,7 @@
                                 <?php
                                     }else{
                                         ?>
-                                        <a href="/views/forms/edit_asset.php?id=<?php echo $i ?>" class="btn btn-warning mb-2 mb-md-0">Edit</a>
+                                        <a class="btn btn-warning mb-2 mb-md-0" id="edit_btn" value="<?php echo $i ?>">Edit</a>
                                         <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
                                 <?php
                                 }
@@ -80,7 +79,6 @@
         </table>
     </div>
 </div>
-
 <?php 
     }
     include "views/partials/layout.php";
