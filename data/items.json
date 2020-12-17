@@ -1,9 +1,9 @@
 [
     {
         "name": "Gura",
-        "code": "1",
+        "quantity": "1",
         "description": "cute",
         "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
-        "isActive": true
+        "isActive": false
     }
 ]

@@ -34,8 +34,8 @@
 						</div>
 						
 						<div class="form-group">
-							<label>Code</label>
-							<input type="number" name="code" placeholder="code123" class="form-control" min="1" value="<?php echo $items[$id]->code ?>">
+							<label>quantity</label>
+							<input type="number" name="code" placeholder="code123" class="form-control" min="1" value="<?php echo $items[$id]->quantity ?>">
 						</div>
 						
 						<div class="form-group">

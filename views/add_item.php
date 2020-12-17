@@ -14,7 +14,7 @@
 						<input type="hidden" name="id" value="<?php echo $id ?>">
 
 						<div class="form-group position-relative add-image">
-							<label for="image-input" class="btn-image-input position-absolute d-flex align-items-center justify-content-center"><p>Image</p></label>
+							<label for="image-input" class="btn-image-input position-absolute d-flex align-items-center justify-content-center" id="img_show"><p>Image</p></label>
 							<!-- <img src="<?php echo $product->image ?>" class="d-block img-fluid"> -->
 							<input type="file" name="image" class="form-control v-hidden" id="image-input">
 							<input type="hidden" name="current_image" class="form-control" value="<?php echo $product->image ?>">
@@ -26,8 +26,8 @@
 						</div>
 						
 						<div class="form-group">
-							<label>Code</label>
-							<input type="number" name="code" placeholder="code123" class="form-control" min="1" value="<?php echo $product->code ?>">
+							<label>quantity</label>
+							<input type="number" name="code" placeholder="code123" class="form-control" min="1" value="<?php echo $product->quantity ?>">
 						</div>
 						
 						<div class="form-group">
@@ -55,7 +55,13 @@
             },100)
 		});
 		// $("#image-input").change(()=>{
-		// 	$.post("")
+
+		// 	let img_name = $("#image-input").val().split('C:\\fakepath\\');
+		// 	$.post("/controllers/img_change.php",{
+		// 		img_name : img_name
+		// 	},function(data,status){
+		// 		$("#img_show").attr("src") = data
+		// 	})
 		// });
     </script>
 </div

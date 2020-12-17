@@ -30,21 +30,21 @@
             </thead>
             <tbody>
                 <?php 
-                $count = 0 ;
+                // $count = 0 ;
                 foreach($items as $i => $asset): 
                 ?>
                     <tr >
                         <td><?php echo $i+1; ?></td>
+                        <td><?php echo $asset->code; ?></td>
                         <td><?php echo $asset->name; ?></td>
-                        <td><?php echo $asset->category; ?></td>
                         <td><?php echo $asset->quantity; ?></td>
                         <td>
                             <div class="row justify-content-around">
-                                 <?php
+                                <?php
                                     if(!$_SESSION['user_details']->isAdmin){
                                 ?>
-                                <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary") ?>">
-                                    <?php $asset->isActive ? print("Active") : print("Inactive") ?>
+                                <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary\"disabled=\"disabled\"") ?>">
+                                    <?php $asset->isActive ? print("Active") : print("Inactive") ;?>
                                 </a>
                                 <form action="" class="">
                                     <button class="btn btn-primary">Borrow</button>
@@ -57,7 +57,6 @@
                                 <?php
                                 }
                             ?>
-
                             </div>
                         </td>
                     </tr>

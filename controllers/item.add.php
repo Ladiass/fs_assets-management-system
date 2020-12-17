@@ -24,7 +24,9 @@
         $img_type = pathinfo($img_name,PATHINFO_EXTENSION);
         $is_img = false;
         $has_details = false;
-    
+
+        print_r($_FILES);
+        die();
         // echo "1";
         if($img_type == "jpg" || $img_type == "svg" ||$img_type == "jpeg" || $img_type == "png" ||$img_type == "gif"){
             $is_img = true;
@@ -44,7 +46,7 @@
     
             $product = new stdClass();
             $product->name = $iName;
-            $product->code = $code;
+            $product->quantity = $code;
             $product->description =$desc;
             $product->image="/assets/img/".$img_name;
             $product->isActive = true;
