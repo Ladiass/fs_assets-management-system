@@ -8,11 +8,6 @@
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif,Arial;
 }
-#form-page{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 .v-hidden{
     visibility: hidden;
 }
