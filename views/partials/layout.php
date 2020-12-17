@@ -41,7 +41,10 @@
 
     include "footer.php";
 ?>
-<div class="block-filter"><div class="block"></div></div>
+
+<div class="block-filter">
+  <div class="block"></div>
+</div>
 <div id="form-page">
   
 </div>
