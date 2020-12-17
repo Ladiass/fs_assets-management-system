@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/setup.css">
 
+
   </head>
   <body>
       
@@ -38,16 +39,19 @@
     get_content();
 
     echo "</main>";
-
-    include "footer.php";
 ?>
-
 <div class="block-filter">
   <div class="block"></div>
 </div>
 <div id="form-page">
-  
 </div>
+
+<?php
+    include "footer.php";
+?>
+
+
+  
     
   </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
     require_once "controllers/data.get.php";
 
-
+    // session_start();
     $title = "Home";
 
     if(!isset($_COOKIE["welcome"])){
@@ -15,7 +15,8 @@
     function get_content(){
     $items = get_item("data/items.json");
         ?>
-   
+    <script src="/assets/js/main.js" defer></script>
+
     <div class="container py-5">
     <div class="table-responsive-sm">
         <table class="table table-hover text-center">
@@ -69,7 +70,7 @@
             <tfoot>
                 <tr>
                     <td colspan="5" class="text-right">
-                        <a href="/views/forms/add_asset.php" class="btn btn-primary">Add</a>
+                        <a class="btn btn-primary" id="add-btn">Add</a>
                     </td>
                 </tr>
             </tfoot>
@@ -79,6 +80,7 @@
         </table>
     </div>
 </div>
+
 <?php 
     }
     include "views/partials/layout.php";
