@@ -1,24 +1,3 @@
-<!-- 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog " role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">User Details</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body"> -->
-		        
-		      <!-- </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary">Submit</button>
-		      </div>
-		    </div>
-		  </div>
-</div> -->
-
-
 <div class="form">
 	<link rel="stylesheet" href="/assets/css/add.css">
 
@@ -26,7 +5,6 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="d-flex align-items-center justify-content-center boxxx">
-
 
 					<form action='/controllers/item.add.php' method="POST" enctype="multipart/form-data" class="box p-5">
 						<div class="titlee my-4">
@@ -44,7 +22,7 @@
 
 						<div class="form-group">
 							<label>Item Name</label>
-							<input type="text" name="product_name" placeholder="Item Name" class="form-control" value="<?php echo $product->name ?>">
+							<input type="text" name="item_name" placeholder="Item Name" class="form-control" value="<?php echo $product->name ?>">
 						</div>
 						
 						<div class="form-group">
@@ -75,6 +53,11 @@
             setTimeout(()=>{
                 $("#form-page .form").remove();
             },100)
-        });
+		});
+		// $("#image-input").on("change",()=>{
+		// 	$("#image-input").post(()=>{
+
+		// 	})
+		// });
     </script>
 </div
