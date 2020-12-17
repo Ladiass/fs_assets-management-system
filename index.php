@@ -1,7 +1,7 @@
 <?php
     require_once "controllers/data.get.php";
 
-
+    // session_start();
     $title = "Home";
 
     if(!isset($_COOKIE["welcome"])){
@@ -15,7 +15,7 @@
     function get_content(){
     $items = get_item("data/items.json");
         ?>
-   
+
     <div class="container py-5">
     <div class="table-responsive-sm">
         <table class="table table-hover text-center">
@@ -30,21 +30,21 @@
             </thead>
             <tbody>
                 <?php 
-                $count = 0 ;
+                // $count = 0 ;
                 foreach($items as $i => $asset): 
                 ?>
                     <tr >
-                        <td><?php echo $count + 1; ?></td>
+                        <td><?php echo $i+1; ?></td>
+                        <td><?php echo $asset->code; ?></td>
                         <td><?php echo $asset->name; ?></td>
-                        <td><?php echo $asset->category; ?></td>
                         <td><?php echo $asset->quantity; ?></td>
                         <td>
                             <div class="row justify-content-around">
-                                 <?php
+                                <?php
                                     if(!$_SESSION['user_details']->isAdmin){
                                 ?>
-                                <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary") ?>">
-                                    <?php $asset->isActive ? print("Active") : print("Inactive") ?>
+                                <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary\"disabled=\"disabled\"") ?>">
+                                    <?php $asset->isActive ? print("Active") : print("Inactive") ;?>
                                 </a>
                                 <form action="" class="">
                                     <button class="btn btn-primary">Borrow</button>
@@ -52,12 +52,11 @@
                                 <?php
                                     }else{
                                         ?>
-                                        <a href="/views/forms/edit_asset.php?id=<?php echo $i ?>" class="btn btn-warning mb-2 mb-md-0">Edit</a>
+                                        <a class="btn btn-warning mb-2 mb-md-0" id="edit_btn" value="<?php echo $i ?>">Edit</a>
                                         <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
                                 <?php
                                 }
                             ?>
-
                             </div>
                         </td>
                     </tr>
@@ -69,7 +68,7 @@
             <tfoot>
                 <tr>
                     <td colspan="5" class="text-right">
-                        <a href="/views/forms/add_asset.php" class="btn btn-primary">Add</a>
+                        <a class="btn btn-primary" id="add-btn">Add</a>
                     </td>
                 </tr>
             </tfoot>

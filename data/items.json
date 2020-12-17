@@ -1,8 +1,9 @@
 [
     {
-        "name" : "lel",
-        "category" :"lol",
-        "quantity" : "1",
+        "name": "Gura",
+        "quantity": "1",
+        "description": "cute",
+        "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
         "isActive": false
     }
 ]

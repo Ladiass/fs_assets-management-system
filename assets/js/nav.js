@@ -13,10 +13,10 @@
     })
 
     $("#reg-btn").click(()=>{
-        $("#form-page").load("../../views/forms/register.php");
+        $("#form-page").load("/views/forms/register.php");
     })
-    
+
     $("#lgn-btn").click(()=>{
-        $("#form-page").load("../../views/forms/login.php");
+        $("#form-page").load("/views/forms/login.php");
     })
     
