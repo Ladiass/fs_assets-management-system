@@ -1,6 +1,5 @@
 <?php
     require_once "controllers/data.get.php";
-    session_start();
 
 
     $title = "Home";
@@ -21,7 +20,7 @@
     <div class="table-responsive-sm">
         <table class="table table-hover text-center">
             <thead>
-                <tr>
+                <tr class="bg-dark">
                     <td class="text-white">Index</td>
                     <td class="text-white">Code</td>
                     <td class="text-white">Item Name</td>
@@ -31,10 +30,11 @@
             </thead>
             <tbody>
                 <?php 
+                $count = 0 ;
                 foreach($items as $i => $asset): 
                 ?>
                     <tr >
-                        <td><?php echo $i + 1; ?></td>
+                        <td><?php echo $count + 1; ?></td>
                         <td><?php echo $asset->name; ?></td>
                         <td><?php echo $asset->category; ?></td>
                         <td><?php echo $asset->quantity; ?></td>

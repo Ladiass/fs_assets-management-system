@@ -1,9 +1,5 @@
 <?php
-  // session_start();
-  // if(!isset($_SESSION["user_details"])){
-  //   header("Location: /views/forms/login.php");
-  //   die();
-  // }
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,100;1,300&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/511217841c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/setup.css">
@@ -44,6 +41,10 @@
 
     include "footer.php";
 ?>
+<div class="block-filter"><div class="block"></div></div>
+<div id="form-page">
+  
+</div>
     
   </body>
 </html>

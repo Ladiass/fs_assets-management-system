@@ -1,12 +1,20 @@
 [
     {
-        "username":"admin",
-        "password":"admin",
-        "isAdmin" : true
+        "username": "liadas",
+        "password": "$2y$10$qZ2iTmhL5y30T\/zG2h1c7OI4WKxyI4yJWO9AuebU4HDM9SBkvAmdW",
+        "email": "liadas@gmail.com",
+        "isAdmin": true
     },
     {
-        "username":"employee",
-        "password":"employee",
-        "isAdmin" : false
+        "username": "admin",
+        "password": "$2y$10$xcsW2RxkTLVneSVrfA\/3.OoEwMq7H8plW68TCsfo7gTrQddp0PnU.",
+        "email": "admin@gmail.com",
+        "isAdmin": true
+    },
+    {
+        "username": "employee",
+        "password": "$2y$10$9brjFa5FRaXzCnyYqBvxmeYyWJ9zRbifeDP9.ZUhAzJ.M5K8eNkQK",
+        "email": "employee@gmail.com",
+        "isAdmin": false
     }
 ]
