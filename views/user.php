@@ -48,7 +48,7 @@ $title = "Users information";
                                 }
                             ?></a>
                             <a class="btn btn-danger" id="user-del" href="/controllers/user.del.php?id=<?php echo $i?>">Delete</a>
-                            <a class="btn btn-danger"  id="user-brr">Borrow</a>
+                            <!-- <a class="btn btn-danger"  id="user-brr">Borrow</a> -->
                         </td>
                     </tr>
                 <?php endforeach; ?>

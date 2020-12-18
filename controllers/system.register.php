@@ -20,6 +20,8 @@ if ($new_user) {
     $nuser->username = $uName;
     $nuser->password = password_hash($uName,PASSWORD_DEFAULT);
     $nuser->email = $uEmail;
+    $nuser->picture = "/assets/img/users/nouser.jpg";
+
     $nuser->isAdmin = false;
 
     $users[] = $nuser;

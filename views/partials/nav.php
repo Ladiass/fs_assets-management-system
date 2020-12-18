@@ -21,7 +21,6 @@
                 </li>
                 <?php 
                     if(isset($_SESSION["user_details"] )&& $_SESSION["user_details"]->isAdmin){
-
                 ?>
                 <li>
                     <a href="javascript:;" id="reg-btn">Register</a>
@@ -29,11 +28,20 @@
                 <li>
                     <a href="/views/user.php">User</a>
                 </li>
+                <?php 
+                }
+                if(isset($_SESSION["user_details"]) ){
+                    if(strtolower($_SESSION["user_details"]->username) != strtolower("admin")){
+                ?>
+                <li>
+                    <a href="/views/usr.inf.php">Profile</a>
+                </li>
+                <?php }?>
                 <li>
                     <a href="#">History</a>
                 </li>
-                <?php }?>
                 <?php
+                    }
                     if(!isset($_SESSION["user_details"])){
                 ?>
                 <li>
