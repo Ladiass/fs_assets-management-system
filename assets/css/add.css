@@ -14,8 +14,12 @@
     transition: 0.25s;
     border-radius: 20px;
 }
+#img_ss{
+    width: 100%;
+}
 label{
     color: white;
+    overflow: hidden;
 }
 .box h1 {
     color: white;

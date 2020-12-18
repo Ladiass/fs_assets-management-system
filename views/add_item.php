@@ -14,8 +14,7 @@
 						<input type="hidden" name="id" value="<?php echo $id ?>">
 
 						<div class="form-group position-relative add-image">
-							<label for="image-input" class="btn-image-input position-absolute d-flex align-items-center justify-content-center" id="img_show"><p>Image</p></label>
-							<!-- <img src="<?php echo $product->image ?>" class="d-block img-fluid"> -->
+							<label for="image-input" class="btn-image-input position-absolute d-flex align-items-center justify-content-center" id="img_show"><p class="position-absolute img__text">Image</p><img src="" id="img_ss"></label>
 							<input type="file" name="image" class="form-control v-hidden" id="image-input">
 							<input type="hidden" name="current_image" class="form-control" value="<?php echo $product->image ?>">
 						</div>
@@ -54,14 +53,37 @@
                 $("#form-page .form").remove();
             },100)
 		});
-		// $("#image-input").change(()=>{
+		$("#image-input").change((ev)=>{
+			// ev.preventDefault();
+			let	newData = new FormData();
+			let files = $("#image-input")[0].files[0];
+			newData.append("image",files);
 
-		// 	let img_name = $("#image-input").val().split('C:\\fakepath\\');
-		// 	$.post("/controllers/img_change.php",{
-		// 		img_name : img_name
-		// 	},function(data,status){
-		// 		$("#img_show").attr("src") = data
-		// 	})
-		// });
+			$.ajax({
+				url:"/controllers/img_change.php",
+				type : "POST",
+				data : newData,
+				contentType:false,
+				processData:false,
+				success:function(response){
+					if(response != 0){
+						// ev.preventDefault();
+						$("#img_ss").attr("src",response);
+						$("#img_ss").show();
+						$(".img__text").hide();
+					}else{
+						alert("File not uploaded");
+					}
+				}
+			})
+			// console.log(ev.target.files)
+			// let file = ev.target.files
+			// $.post("/controllers/img_change.php",{
+			// 	img : file
+			// },function(data,status){
+			// 	consoel.log(data)
+			// 	// $("#img_show").attr("src") = data
+			// })
+		});
     </script>
 </div

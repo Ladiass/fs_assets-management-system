@@ -11,3 +11,6 @@
 .v-hidden{
     visibility: hidden;
 }
+td{
+    font-weight: bold;
+}

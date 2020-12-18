@@ -48,7 +48,6 @@
             $items[$id]->image = "/assets/img/".$img_name;
             move_uploaded_file($img_tmpname,"../assets/img/".$img_name);
         // echo "6";
-
         }
 
         file_put_contents($url ,json_encode($items,JSON_PRETTY_PRINT) );

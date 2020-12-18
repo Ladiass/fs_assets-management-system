@@ -25,8 +25,6 @@
         $is_img = false;
         $has_details = false;
 
-        print_r($_FILES);
-        die();
         // echo "1";
         if($img_type == "jpg" || $img_type == "svg" ||$img_type == "jpeg" || $img_type == "png" ||$img_type == "gif"){
             $is_img = true;

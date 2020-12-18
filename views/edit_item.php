@@ -23,8 +23,11 @@
 						<input type="hidden" name="id" value="<?php echo $id ?>">
 
 						<div class="form-group position-relative add-image">
-							<label for="image-input" class="btn-image-input position-absolute d-flex align-items-center justify-content-center" ><img src="<?php echo $items[$id]->image;?>" alt="" id="cImage"></label>
-							<!-- <img src="<?php echo $product->image ?>" class="d-block img-fluid"> -->
+							<label for="image-input" class="btn-image-input position-absolute d-flex align-items-center justify-content-center" id="img_show">
+								<img src="<?php echo $items[$id]->image;?>" alt="" id="cImage">
+							</label>
+
+
 							<input type="file" name="image" class="form-control v-hidden" id="image-input">
 						</div>
 
@@ -62,6 +65,29 @@
                 $("#form-page .form").remove();
             },100)
 		});
-		
+		$("#image-input").change((ev)=>{
+			// ev.preventDefault();
+			let	newData = new FormData();
+			let files = $("#image-input")[0].files[0];
+			newData.append("image",files);
+
+			$.ajax({
+				url:"/controllers/img_change.php",
+				type : "POST",
+				data : newData,
+				contentType:false,
+				processData:false,
+				success:function(response){
+					if(response != 0){
+						// ev.preventDefault();
+						$("#cImage").attr("src",response);
+						$("#cImage").show();
+						$(".img__text").hide();
+					}else{
+						alert("File not uploaded");
+					}
+				}
+			})
+		});
     </script>
 </div>

@@ -43,15 +43,23 @@
                                 <?php
                                     if(!$_SESSION['user_details']->isAdmin){
                                 ?>
-                                <a href="/controllers/asset_process/item.ed.php?id=<?php echo $i ?>" class="btn btn-<?php $asset->isActive ? print("success") : print("secondary\"disabled=\"disabled\"") ?>">
+                                <a class="btn btn-<?php $asset->isActive ? print("success\"disabled=\"disabled\"") : print("secondary\"disabled=\"disabled\"") ?>">
                                     <?php $asset->isActive ? print("Active") : print("Inactive") ;?>
                                 </a>
-                                <form action="" class="">
+                                <a href="javascript:;" class="btn btn-primary" id="brr-btn" value="<?php echo $i ?>">Borrow</a>
+                                <!-- <form action="" class="">
                                     <button class="btn btn-primary">Borrow</button>
-                                </form>
+                                </form> -->
                                 <?php
                                     }else{
+                                        if(!$asset->isActive){
                                         ?>
+                                        <a class="btn btn-success mb-2 mb-md-0" id="active_btn" value="<?php echo $i ?>">Active</a>
+                                        <?php
+                                        }else{?>
+                                        <a class="btn btn-warning mb-2 mb-md-0" id="active_btn" value="<?php echo $i ?>">unActive</a>
+                                         <?php
+                                        }?>
                                         <a class="btn btn-warning mb-2 mb-md-0" id="edit_btn" value="<?php echo $i ?>">Edit</a>
                                         <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
                                 <?php
