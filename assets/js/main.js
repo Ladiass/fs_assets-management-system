@@ -17,6 +17,18 @@ document.addEventListener("click",(ev)=>{
         let id = e.getAttribute("value");
         $.post("/controllers/item.act.php",{
             id : id
+        },function(data,status){
+            console.log(data)
+            if(data != 0){
+                e.classList.remove("btn-success");
+                e.classList.add("btn-warning");
+                e.innerHTML = "unActive";
+            }else{
+                e.classList.remove("btn-warning");
+                e.classList.add("btn-success");
+                e.innerHTML = "Active";
+            }
+
         });
     }
     if(e.id == "brr-btn"){
