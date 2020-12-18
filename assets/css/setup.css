@@ -11,6 +11,9 @@
 .v-hidden{
     visibility: hidden;
 }
+main{
+    min-height: 100%;
+}
 td{
     font-weight: bold;
 }

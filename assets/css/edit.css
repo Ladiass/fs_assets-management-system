@@ -19,9 +19,9 @@ label{
     color: white;
     overflow: hidden;
 }
-label>img{
+/* label>img{
     width: 100%;
-}
+} */
 .box h1 {
     color: white;
     text-transform: uppercase;

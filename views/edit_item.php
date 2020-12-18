@@ -9,7 +9,7 @@
 
 <div class="form">
 	<link rel="stylesheet" href="/assets/css/edit.css">
-
+	<script src="/assets/js/edit.js" defer></script>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -24,7 +24,7 @@
 
 						<div class="form-group position-relative add-image">
 							<label for="image-input" class="btn-image-input position-absolute d-flex align-items-center justify-content-center" id="img_show">
-								<img src="<?php echo $items[$id]->image;?>" alt="" id="cImage">
+								<img src="<?php echo $items[$id]->image;?>" alt="" id="cImage" width="100%">
 							</label>
 
 
@@ -59,35 +59,5 @@
             </div>
         </div>
     </div>
-    <script>
-        $("#bar-close-form").click(()=>{
-            setTimeout(()=>{
-                $("#form-page .form").remove();
-            },100)
-		});
-		$("#image-input").change((ev)=>{
-			// ev.preventDefault();
-			let	newData = new FormData();
-			let files = $("#image-input")[0].files[0];
-			newData.append("image",files);
-
-			$.ajax({
-				url:"/controllers/img_change.php",
-				type : "POST",
-				data : newData,
-				contentType:false,
-				processData:false,
-				success:function(response){
-					if(response != 0){
-						// ev.preventDefault();
-						$("#cImage").attr("src",response);
-						$("#cImage").show();
-						$(".img__text").hide();
-					}else{
-						alert("File not uploaded");
-					}
-				}
-			})
-		});
-    </script>
+    
 </div>

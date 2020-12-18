@@ -27,7 +27,7 @@
                     <a href="javascript:;" id="reg-btn">Register</a>
                 </li>
                 <li>
-                    <a href="#">User</a>
+                    <a href="/views/user.php">User</a>
                 </li>
                 <li>
                     <a href="#">History</a>

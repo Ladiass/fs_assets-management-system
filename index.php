@@ -30,22 +30,26 @@
             </thead>
             <tbody>
                 <?php 
-                // $count = 0 ;
                 foreach($items as $i => $asset): 
                 ?>
                     <tr >
-                        <td><?php echo $i+1; ?></td>
-                        <td><?php echo $asset->code; ?></td>
-                        <td><?php echo $asset->name; ?></td>
-                        <td><?php echo $asset->quantity; ?></td>
-                        <td>
-                            <div class="row justify-content-around">
+                        <td class="align-middle"><?php echo $i+1; ?></td>
+                        <td class="align-middle"><?php echo $asset->code; ?></td>
+                        <td class="align-middle d-flex align-items-center">
+                            <div style="width: 50px;">
+                                <img src="<?php echo $asset->image ?>" alt="" width="100%" class="p-2">
+                            </div>
+                            <?php echo $asset->name; ?>
+                        </td>
+                        <td class="align-middle"><?php echo $asset->quantity; ?></td>
+                        <td class="">
+                            <div class="row justify-content-around align-items-center">
                                 <?php
                                     if(!$_SESSION['user_details']->isAdmin){
                                 ?>
-                                <a class="btn btn-<?php $asset->isActive ? print("success\"disabled=\"disabled\"") : print("secondary\"disabled=\"disabled\"") ?>">
+                                <p class="px-3 py-2 bg-<?php $asset->isActive ? print("success\"disabled=\"disabled\"") : print("danger text-white \"disabled=\"disabled\"") ?>">
                                     <?php $asset->isActive ? print("Active") : print("Inactive") ;?>
-                                </a>
+                                </p>
                                 <a href="javascript:;" class="btn btn-primary" id="brr-btn" value="<?php echo $i ?>">Borrow</a>
                                 <!-- <form action="" class="">
                                     <button class="btn btn-primary">Borrow</button>
@@ -54,14 +58,14 @@
                                     }else{
                                         if(!$asset->isActive){
                                         ?>
-                                        <a class="btn btn-success mb-2 mb-md-0" id="active_btn" value="<?php echo $i ?>">Active</a>
+                                        <a class="btn btn-success " id="active_btn" value="<?php echo $i ?>">Active</a>
                                         <?php
                                         }else{?>
-                                        <a class="btn btn-warning mb-2 mb-md-0" id="active_btn" value="<?php echo $i ?>">unActive</a>
+                                        <a class="btn btn-warning " id="active_btn" value="<?php echo $i ?>">unActive</a>
                                          <?php
                                         }?>
-                                        <a class="btn btn-warning mb-2 mb-md-0" id="edit_btn" value="<?php echo $i ?>">Edit</a>
-                                        <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger mb-2 mb-md-0">Delete</a>
+                                        <a class="btn btn-warning " id="edit_btn" value="<?php echo $i ?>">Edit</a>
+                                        <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger ">Delete</a>
                                 <?php
                                 }
                             ?>
