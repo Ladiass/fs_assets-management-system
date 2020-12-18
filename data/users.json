@@ -9,10 +9,11 @@
     },
     {
         "username": "liadas",
-        "password": "$2y$10$z2SHSgZC1YLQpvPbgyqoc.VHVEjA1K3P\/2SX3frIbMUT7uZXwPXeK",
+        "password": "$2y$10$VYyw8I6lrfmPREIEBWgoWuXmGtw0FyttLNsXst.pYkMip3SNSo9Fi",
         "email": "liadas@gmail.com",
         "picture": "\/assets\/img\/users\/nouser.jpg",
-        "isAdmin": false
+        "isAdmin": true,
+        "fullname": "Lim"
     },
     {
         "username": "employee",

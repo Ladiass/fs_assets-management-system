@@ -1,5 +1,5 @@
 <?php
-$title = "Users information";
+$title = "Users";
     function get_content(){
         include "../controllers/data.get.php";
         $url = "../data/users.json";

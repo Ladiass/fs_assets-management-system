@@ -17,5 +17,5 @@
             die();
         }
     }
-
-    header("Location: /views/forms/login.php?uname=".$username);
+    header("Location: /");
+    // header("Location: /views/forms/login.php?uname=".$username);

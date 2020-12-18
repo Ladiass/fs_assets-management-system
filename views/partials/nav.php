@@ -38,7 +38,7 @@
                 </li>
                 <?php }?>
                 <li>
-                    <a href="#">History</a>
+                    <a href="/views/history.php">History</a>
                 </li>
                 <?php
                     }

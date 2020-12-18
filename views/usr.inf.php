@@ -1,9 +1,9 @@
 <?php
     session_start();
     $title =    ucfirst($_SESSION["user_details"]->username);
-    // if(strtolower($_SESSION["user_details"]->username) == strtolower("admin")){
-    //     header("Location: /");
-    // }
+    if(strtolower($_SESSION["user_details"]->username) == strtolower("admin")){
+        header("Location: /");
+    }
     function get_content(){
         $id =$_GET["id"];
         include "../controllers/data.get.php";
@@ -40,6 +40,16 @@
                             <h5 class="card-title">Email :</h5>
                             <p class="ml-5 pt-4"><?php echo $_SESSION["user_details"]->email?></p>
                         </div>
+                        <?php
+                            if(isset($_SESSION['user_details'])){
+                                ?>
+                                <div class="row align-items-center">
+                                    <h5 class="card-title">Password :</h5>
+                                    <p class="ml-5 pt-4"><?php echo "*******"?></p>
+                                </div>
+                                <?php
+                            }
+                        ?>
                         <!-- <a href="#" class="btn btn-primary">Edit</a> -->
                     </div>
                 </div>

@@ -1,9 +1,9 @@
 <?php
     session_start();
     $title = "Edit";
-    // if(strtolower($_SESSION["user_details"]->username) == strtolower("admin")){
-    //     header("Location: /");
-    // }
+    if(strtolower($_SESSION["user_details"]->username) == strtolower("admin")){
+        header("Location: /");
+    }
     function get_content(){
         $id =$_GET["id"];
         include "../controllers/data.get.php";
@@ -41,11 +41,22 @@
                                 <h5 class="card-title">Email :</h5>
                                 <input type="email" value="<?php echo $_SESSION["user_details"]->email?>" name="email" required class="form-control">
                             </div>
+                            <?php
+                            if(isset($_SESSION['user_details'])){
+                                ?>
+                                <div class="row align-items-center">
+                                    <h5 class="card-title">Password :</h5>
+                                    <input type="password" name="password" required class="form-control">
+                                </div>
+                                <?php
+                            }
+                        ?>
                             <!-- <a href="#" class="btn btn-primary">Edit</a> -->
                             <div class="button-load py-5">
                                 <a href="/views/usr.inf.php" class="btn btn-warning">Cancel</a>
                                 <input type="submit" class="btn btn-primary" value="Done">
                             </div>
+                            
                         </form>
                     </div>
                 </div>
