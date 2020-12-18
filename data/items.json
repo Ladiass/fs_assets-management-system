@@ -1,9 +1,10 @@
 [
     {
         "name": "Gura",
-        "quantity": "1",
+        "quantity": "10",
         "description": "cute",
         "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
-        "isActive": false
+        "isActive": false,
+        "code": "10"
     }
 ]

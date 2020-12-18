@@ -42,7 +42,7 @@
     if($has_details){
         // echo "5";
         $items[$id]->name = $item_name;
-        $items[$id]->code = $code;
+        $items[$id]->quantity = $code;
         $items[$id]->description =$desc;
         if($new_image && $img_size > 0){
             $items[$id]->image = "/assets/img/".$img_name;
