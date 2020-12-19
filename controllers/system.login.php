@@ -13,9 +13,15 @@
         //$password == $user->password
         if($username == $user->username && password_verify($password,$user->password)){
             $_SESSION['user_details'] = $user;
+            if(isset($_SESSION['login'])){
+                unset($_SESSION["username"]);
+                unset($_SESSION["login"]);
+            }
             header("Location: /");
             die();
         }
     }
-    header("Location: /");
-    // header("Location: /views/forms/login.php?uname=".$username);
+    
+    $_SESSION['username'] = $username;
+    $_SESSION["login"] = false;
+    header("Location: /?username=".$username);

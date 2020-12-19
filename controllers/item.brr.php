@@ -16,6 +16,7 @@
         $newhistory->time = date("Y - n - j (H:i:s)");
         $newhistory->image = $items[$id]->image;
         $newhistory->borrower = $_SESSION["user_details"]->username;
+        $newhistory->return = false;
 
         $history[] = $newhistory;
 

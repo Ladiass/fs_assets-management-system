@@ -3,13 +3,47 @@
         "itemname": "Gurass",
         "count": "2",
         "time": "2020 - 12 - 19 (10:05:09)",
-        "borrower": "employee"
+        "borrower": "employee",
+        "return": true
     },
     {
         "itemname": "Gurass",
         "count": "1",
         "time": "2020 - 12 - 19 (10:07:47)",
         "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
-        "borrower": "employee"
+        "borrower": "employee",
+        "return": true
+    },
+    {
+        "itemname": "Gurass",
+        "count": "return",
+        "time": "2020 - 12 - 19 (10:51:12)",
+        "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
+        "borrower": "employee",
+        "return": true
+    },
+    {
+        "itemname": "Gurass",
+        "count": "return",
+        "time": "2020 - 12 - 19 (10:56:14)",
+        "image": null,
+        "borrower": "employee",
+        "return": true
+    },
+    {
+        "itemname": "Gurass",
+        "count": "2",
+        "time": "2020 - 12 - 19 (10:56:53)",
+        "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
+        "borrower": "employee",
+        "return": true
+    },
+    {
+        "itemname": "Gurass",
+        "count": "return",
+        "time": "2020 - 12 - 19 (10:56:59)",
+        "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
+        "borrower": "employee",
+        "return": true
     }
 ]

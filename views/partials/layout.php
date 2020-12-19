@@ -1,5 +1,8 @@
 <?php
   session_start();
+  if(!isset($_SESSION["user_details"])){
+    echo "<script src='/assets/js/nologin.js'></script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

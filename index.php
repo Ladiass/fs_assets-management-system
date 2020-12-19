@@ -8,10 +8,7 @@
         header("Location: /views/forms/welcome.php");
         die();
     }
-    // if(!isset($_SESSION["user_details"])){
-    //     header("Location: /views/forms/login.php");
-    //     die();
-    // }
+    
     function get_content(){
     $items = get_item("data/items.json");
         ?>
@@ -43,17 +40,19 @@
                         </td>
                         <td class="align-middle"><?php echo $asset->quantity; ?></td>
                         <td class="">
+                        <?php if(isset($_SESSION['user_details'])){?>
+
                             <div class="row justify-content-around align-items-center">
                                 <?php
-                                    if(!$_SESSION['user_details']->isAdmin){
+                                    if(!$_SESSION['user_details']->isAdmin ){
                                 ?>
                                 <p class="px-3 py-2 bg-<?php $asset->isActive ? print("success\"disabled=\"disabled\"") : print("danger text-white \"disabled=\"disabled\"") ?>">
                                     <?php $asset->isActive ? print("Active") : print("Inactive") ;?>
                                 </p>
-                                <a href="javascript:;" class="btn btn-primary" id="brr-btn" value="<?php echo $i ?>">Borrow</a>
-                                <!-- <form action="" class="">
-                                    <button class="btn btn-primary">Borrow</button>
-                                </form> -->
+                                <a href="javascript:;" class="btn btn-primary" id="brr-btn" value="<?php echo $i ?>" <?php
+                                    if(!$asset->isActive) echo "disabled"
+                                ?>>Borrow</a>
+
                                 <?php
                                     }else{
                                         if(!$asset->isActive){
@@ -70,6 +69,8 @@
                                 }
                             ?>
                             </div>
+                        <?php }?>
+
                         </td>
                     </tr>
                 <?php endforeach; ?>

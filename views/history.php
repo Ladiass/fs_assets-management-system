@@ -43,10 +43,13 @@ $title = "History";
                             <!-- <a class="btn btn-danger"  id="user-brr">Borrow</a> -->
                             <?php 
                             }
-                                if($asset->borrower == $_SESSION["user_details"]->username){
+                                if($asset->borrower == $_SESSION["user_details"]->username && !$asset->return){
                             ?>
-                            
                                 <a class="btn btn-danger" id="user-del" href="/controllers/item.return.php?id=<?php echo $i?>">Return</a>
+                            <?php }
+                                if($asset->return){
+                            ?>
+                                <p class="px-3 py-2 bg-success" disabled="disabled ">Returned</p>
                             <?php }?>
                         </td>
                     </tr>
