@@ -29,7 +29,7 @@ body {
     z-index: 1000;
     position: fixed;
     left: 250px;
-    width: 0;
+    width: 250px;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
@@ -41,13 +41,13 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 0px;
 }
 
 #page-content-wrapper {
     width: 50%;
     position: absolute;
-    padding: 15px;
+    padding: 20px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -117,7 +117,7 @@ body {
     }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 0;
+        width: 0px;
     }
 
     #page-content-wrapper {

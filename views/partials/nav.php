@@ -8,7 +8,7 @@
    <div id="wrapper" class="toggled this-nav">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper" class="">
+        <div id="sidebar-wrapper" >
             <ul class="sidebar-nav text-center overflowx-hidden">
                 <li class="sidebar-brand row justify-content-between">
                     <a href="/">
@@ -57,11 +57,13 @@
             </ul>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar navbar-expand-md navbar-light ">
             <div id="page-content-wrapper">
-                <a href="javascript:;" class="btn btn-default btn-bar" id="menu-toggle"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                <a href="javascript:;" class="btn btn-default btn-bar" id="menu-toggle">
+                    <i class="fa fa-align-justify" aria-hidden="true"></i>
+                </a>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler v-hidden" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse pl-auto" id="navbarNav">
