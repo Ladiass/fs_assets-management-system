@@ -33,8 +33,10 @@ document.addEventListener("click",(ev)=>{
     }
     if(e.id == "brr-btn"){
         let id = e.getAttribute("value");
-        $.post("/controllers/item.brr.php",{
-            id : id
+        // location.href = "?id=" ;
+        $("#form-page").load("/views/borrow.php",{
+            id:id
         });
+        ev.preventDefault();
     }
 })
