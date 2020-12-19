@@ -50,7 +50,7 @@
             $product->isActive = true;
     
             move_uploaded_file($img_tmpname,"../assets/img/".$img_name);
-            $items[] = $product;
+            array_unshift($items,$product);
             file_put_contents($url,json_encode($items,JSON_PRETTY_PRINT));
     
             // $_SESSION['message'] = "New Pordut: <span class='text-success'>$products_name</span> was successfully added!";

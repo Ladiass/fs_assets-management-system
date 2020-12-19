@@ -47,7 +47,7 @@ $title = "Users";
                                     echo "Admin";
                                 }
                             ?></a>
-                            <a class="btn btn-danger" id="user-del" href="/controllers/user.del.php?id=<?php echo $i?>">Delete</a>
+                            <a class="btn btn-danger" id="user-del" href="/controllers/user.del.php?id=<?php echo $i?>">Remove</a>
                             <!-- <a class="btn btn-danger"  id="user-brr">Borrow</a> -->
                         </td>
                     </tr>

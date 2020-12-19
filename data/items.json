@@ -1,17 +1,24 @@
 [
     {
+        "name": "lel",
+        "quantity": "12",
+        "description": "test",
+        "image": "\/assets\/img\/jd_DB5454-001_a.jpg",
+        "isActive": true
+    },
+    {
         "name": "Gurass",
         "quantity": 0,
         "description": "cutesd",
         "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
-        "isActive": true,
+        "isActive": false,
         "code": "10"
     },
     {
         "name": "shoes",
-        "quantity": 0,
+        "quantity": 100,
         "description": "lel",
         "image": "\/assets\/img\/jd_DB5454-001_a.jpg",
-        "isActive": false
+        "isActive": true
     }
 ]

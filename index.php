@@ -27,12 +27,20 @@
             </thead>
             <tbody>
                 <?php 
+                // foreach($items as $i => $asset){
+                    // if(!$asset->isActive){
+                    //     array_push($items,$asset);
+                    //     array_splice($items , $i , 1);  
+                    // }
+                // sort($items);
+                $cc = 0;
                 foreach($items as $i => $asset): 
+                    $cc++;
                 ?>
                     <tr >
-                        <td class="align-middle"><?php echo $i+1; ?></td>
+                        <td class="align-middle"><?php echo $cc; ?></td>
                         <!-- <td class="align-middle"><?php echo $asset->code; ?></td> -->
-                        <td class="align-middle d-flex align-items-center justify-content-center">
+                        <td class="align-middle d-flex align-items-center ">
                             <div style="width: 50px;">
                                 <img src="<?php echo $asset->image ?>" alt="" width="100%" class="p-2">
                             </div>
@@ -57,7 +65,7 @@
                                     }else{
                                         if(!$asset->isActive){
                                         ?>
-                                        <a class="btn btn-success " id="active_btn" value="<?php echo $i ?>">Active</a>
+                                        <a class="btn btn-success " id="active_btn" value="<?php echo $i ?>" <?php if($asset->quantity < 1 ) echo "disabled"?> >Active</a>
                                         <?php
                                         }else{?>
                                         <a class="btn btn-warning " id="active_btn" value="<?php echo $i ?>">unActive</a>

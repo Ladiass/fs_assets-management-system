@@ -19,8 +19,8 @@
         $newhistory->borrower = $_SESSION["user_details"]->username;
         $newhistory->return = false;
 
-        $history[] = $newhistory;
-
+        array_unshift($history,$newhistory);
+        
         if($items["$id"]->quantity <= 0){
             $items["$id"]->isActive = false;
         }

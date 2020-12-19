@@ -12,6 +12,7 @@
         if($item->name == $history[$id]->itemname){
             $item->quantity += $history[$id]->count;
             $history[$id]->return = true;
+            $item->isActive = true ;
         }
     }
 
