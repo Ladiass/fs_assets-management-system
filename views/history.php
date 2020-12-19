@@ -25,19 +25,19 @@ $title = "History";
                 ?>
                 <form action="/controllers/item.return.php"  method="POST">
                     <tr class="text-center">
-                        <td class="align-middle"><?php echo $i+1; ?></td>
-                        <td class="align-middle d-flex align-items-center justify-content-center">
+                        <td class="align-middle " style="border: none;"><?php echo $i+1; ?></td>
+                        <td class="align-middle d-flex align-items-center justify-content-center " style="border: none;">
                             <div style="width: 50px;">
                                 <img src="<?php echo $asset->image ?>" alt="" width="100%" class="p-2">
                             </div>    
                             <?php echo $asset->itemname; ?>
                         </td>
-                        <td class="align-middle">
+                        <td class="align-middle " style="border: none;">
                             
                             <?php echo $asset->time ?>
                         </td>
-                        <td class="align-middle"><?php echo $asset->borrower ?></td>
-                        <td>
+                        <td class="align-middle " style="border: none;"><?php echo $asset->borrower ?></td>
+                        <td class="d-flex align-items-center justify-content-center" style="border: none;">
                             <?php if($_SESSION["user_details"]->isAdmin){?>
                             <!-- <a class="btn btn-danger" id="user-del" href="/controllers/user.del.php?id=<?php echo $i?>">Delete</a> -->
                             <!-- <a class="btn btn-danger"  id="user-brr">Borrow</a> -->
@@ -49,11 +49,11 @@ $title = "History";
                             <?php }
                                 if($asset->return){
                             ?>
-                                <p class="px-3 py-2 bg-success" disabled="disabled ">Returned</p>
+                                <p class="px-3 py-2 bg-success w-100" disabled="disabled ">Returned</p>
                                 <?php 
                                 }else{
                                 if($_SESSION["user_details"]->isAdmin){?>
-                                    <p class="px-3 py-2 bg-danger" disabled="disabled ">Not yet</p>
+                                    <p class="px-3 py-2 bg-danger w-100" disabled="disabled ">Not yet</p>
                                 <?php }}?>
                         </td>
                     </tr>

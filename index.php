@@ -38,41 +38,44 @@
                     $cc++;
                 ?>
                     <tr >
-                        <td class="align-middle"><?php echo $cc; ?></td>
+                        <td class="align-middle" style="border: none;"><?php echo $cc; ?></td>
                         <!-- <td class="align-middle"><?php echo $asset->code; ?></td> -->
-                        <td class="align-middle d-flex align-items-center ">
+                        <td class="align-middle d-flex align-items-center " style="border: none;">
                             <div style="width: 50px;">
                                 <img src="<?php echo $asset->image ?>" alt="" width="100%" class="p-2">
                             </div>
                             <?php echo $asset->name; ?>
                         </td>
-                        <td class="align-middle"><?php echo $asset->quantity; ?></td>
-                        <td class="">
+                        <td class="align-middle" style="border: none;"><?php echo $asset->quantity; ?></td>
+                        <td class="" style="border: none;">
                         <?php if(isset($_SESSION['user_details'])){?>
 
-                            <div class="row justify-content-around align-items-center">
+                            <div class="d-flex align-items-center justify-content-end">
                                 <?php
                                     if(!$_SESSION['user_details']->isAdmin ){
                                 ?>
-                                <p class="px-3 py-2 bg-<?php $asset->isActive ? print("success\"disabled=\"disabled\"") : print("danger text-white \"disabled=\"disabled\"") ?>">
-                                    <?php $asset->isActive ? print("Active") : print("Inactive") ;?>
-                                </p>
-                                <a href="javascript:;" class="btn btn-primary" id="brr-btn" value="<?php echo $i ?>" <?php
-                                    if(!$asset->isActive) echo "disabled"
-                                ?>>Borrow</a>
-
+                                <div class="d-flex align-items-center">
+                                    <p class="align-middle mx-1 px-3 py-2 bg-<?php $asset->isActive ? print("success\"disabled=\"disabled\"") : print("danger text-white \"disabled=\"disabled\"") ?>">
+                                        <?php $asset->isActive ? print("Active") : print("Inactive") ;?>
+                                    </p>
+                                    <a href="javascript:;" class="btn btn-primary mx-1 px-3" id="brr-btn" value="<?php echo $i ?>" <?php
+                                        if(!$asset->isActive) echo "disabled"
+                                    ?>>Borrow</a>
+                                </div>
                                 <?php
                                     }else{
                                         if(!$asset->isActive){
                                         ?>
-                                        <a class="btn btn-success " id="active_btn" value="<?php echo $i ?>" <?php if($asset->quantity < 1 ) echo "disabled"?> >Active</a>
-                                        <?php
-                                        }else{?>
-                                        <a class="btn btn-warning " id="active_btn" value="<?php echo $i ?>">unActive</a>
-                                        <?php
-                                        }?>
-                                        <a class="btn btn-warning " id="edit_btn" value="<?php echo $i ?>">Edit</a>
-                                        <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger ">Delete</a>
+                                        <div>
+                                            <a class="btn btn-success px-3 mx-1" id="active_btn" value="<?php echo $i ?>" <?php if($asset->quantity < 1 ) echo "disabled"?> >Active</a>
+                                            <?php
+                                            }else{?>
+                                            <a class="btn btn-warning px-3 mx-1" id="active_btn" value="<?php echo $i ?>">unActive</a>
+                                            <?php
+                                            }?>
+                                            <a class="btn btn-warning px-3 mx-1" id="edit_btn" value="<?php echo $i ?>">Edit</a>
+                                            <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger px-3 mx-1">Delete</a>
+                                        </div>
                                 <?php
                                 }
                             ?>
@@ -88,7 +91,7 @@
             ?>
             <tfoot>
                 <tr>
-                    <td colspan="5" class="text-right">
+                    <td colspan="5" class="text-right" >
                         <a class="btn btn-primary" id="add-btn">Add</a>
                     </td>
                 </tr>

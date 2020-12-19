@@ -14,7 +14,7 @@
         $newhistory = new stdClass();
         $newhistory->itemname = $items[$id]->name;
         $newhistory->count = $brr_count;
-        $newhistory->time = date("Y - n - j (H:i:s)");
+        $newhistory->time = date("Y - n - j (His)");
         $newhistory->image = $items[$id]->image;
         $newhistory->borrower = $_SESSION["user_details"]->username;
         $newhistory->return = false;

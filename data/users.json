@@ -21,5 +21,12 @@
         "email": "employee@gmail.com",
         "picture": "\/assets\/img\/users\/nouser.jpg",
         "isAdmin": false
+    },
+    {
+        "username": "test",
+        "password": "$2y$10$Gsuvj1\/XMfYUZ9DtJn2S9uflokalPoj3veUr1oUVDZiWB3AGKRLHu",
+        "email": "test@gmail.com",
+        "picture": "\/assets\/img\/users\/nouser.jpg",
+        "isAdmin": false
     }
 ]
