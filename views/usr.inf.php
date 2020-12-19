@@ -21,7 +21,7 @@
           <div class="card-body row">
                 <div class="col-sm-3">
                     <label for="user_image" class="rounded-circle" style="overflow: hidden;cursor: pointer;">
-                        <img  src="<?php echo $_SESSION['user_details']->picture ?>" alt="
+                        <img id="picture" src="<?php echo $_SESSION['user_details']->picture ?>" alt="
                         <?php echo $_SESSION["user_details"]->username?>" width="100%" >
                     </label>
                     <input type="file" id="user_image" class="v-hidden" height="1px">
@@ -56,7 +56,32 @@
             </div>
         </div>
     </div>
+    <script>
+        $("#user_image").on("change",()=>{
+            let	newData = new FormData();
+            let files = $("#user_image")[0].files[0];
+            newData.append("image",files);
 
+            $.ajax({
+            url:"/controllers/user.picture.php",
+            type : "POST",
+            data : newData,
+            contentType:false,
+            processData:false,
+            success:function(response){
+            if(response != 0){
+                // ev.preventDefault();
+                // console.log(response);
+                $("#picture").attr("src",response);
+                $("#picture").show();
+                // $(".img__text").hide();
+            }else{
+                alert("File not uploaded");
+            }
+        }
+    })
+        })
+    </script>
 <?php 
     }
     include "partials/layout.php";
