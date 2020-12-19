@@ -62,7 +62,7 @@
                                         <?php
                                         }else{?>
                                         <a class="btn btn-warning " id="active_btn" value="<?php echo $i ?>">unActive</a>
-                                         <?php
+                                        <?php
                                         }?>
                                         <a class="btn btn-warning " id="edit_btn" value="<?php echo $i ?>">Edit</a>
                                         <a href="/controllers/item.rm.php?id=<?php echo $i ?>" class="btn btn-danger ">Delete</a>
