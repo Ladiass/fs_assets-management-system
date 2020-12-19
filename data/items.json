@@ -1,10 +1,17 @@
 [
     {
         "name": "Gurass",
-        "quantity": 11,
+        "quantity": 0,
         "description": "cutesd",
         "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
         "isActive": true,
         "code": "10"
+    },
+    {
+        "name": "shoes",
+        "quantity": 0,
+        "description": "lel",
+        "image": "\/assets\/img\/jd_DB5454-001_a.jpg",
+        "isActive": false
     }
 ]

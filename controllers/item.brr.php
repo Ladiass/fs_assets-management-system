@@ -7,6 +7,7 @@
     $id = $_POST['id'];
     $brr_count = $_POST["brr_count"];
     date_default_timezone_set("Asia/Kuala_Lumpur");
+
     if($items[$id]->quantity >= $brr_count && $brr_count != 0){
         $items[$id]->quantity -= $brr_count;
 
@@ -20,12 +21,15 @@
 
         $history[] = $newhistory;
 
+        if($items["$id"]->quantity <= 0){
+            $items["$id"]->isActive = false;
+        }
+        
         file_put_contents($url, json_encode($items , JSON_PRETTY_PRINT));
         file_put_contents("../data/borrow.json", json_encode($history , JSON_PRETTY_PRINT));
 
-        if($items["$id"]->quantity == 0){
-            $items["$id"]->isActive == false;
-        }
+       
+
         header("Location: ".$_SERVER["HTTP_REFERER"]);
     }else{
         header("Location: ".$_SERVER["HTTP_REFERER"]);

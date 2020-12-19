@@ -19,7 +19,7 @@
             <thead>
                 <tr class="bg-dark">
                     <td class="text-white">Index</td>
-                    <td class="text-white">Code</td>
+                    <!-- <td class="text-white">Code</td> -->
                     <td class="text-white">Item Name</td>
                     <td class="text-white">Quantity</td>
                     <td class="text-white">Actions</td>
@@ -31,7 +31,7 @@
                 ?>
                     <tr >
                         <td class="align-middle"><?php echo $i+1; ?></td>
-                        <td class="align-middle"><?php echo $asset->code; ?></td>
+                        <!-- <td class="align-middle"><?php echo $asset->code; ?></td> -->
                         <td class="align-middle d-flex align-items-center justify-content-center">
                             <div style="width: 50px;">
                                 <img src="<?php echo $asset->image ?>" alt="" width="100%" class="p-2">

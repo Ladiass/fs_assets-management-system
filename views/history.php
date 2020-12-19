@@ -50,7 +50,11 @@ $title = "History";
                                 if($asset->return){
                             ?>
                                 <p class="px-3 py-2 bg-success" disabled="disabled ">Returned</p>
-                            <?php }?>
+                                <?php 
+                                }else{
+                                if($_SESSION["user_details"]->isAdmin){?>
+                                    <p class="px-3 py-2 bg-danger" disabled="disabled ">Not yet</p>
+                                <?php }}?>
                         </td>
                     </tr>
                 </form>
