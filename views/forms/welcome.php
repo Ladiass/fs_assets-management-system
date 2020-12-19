@@ -24,9 +24,10 @@
     <link rel="stylesheet" href="/assets/css/welcome.css">
   </head>
   <body >
-    <div class="">
-        <h1 >Welcome to</h1>
-        <p class="lead">-Security.Easy.Creative-</p>
+    <div class="bg-image"></div>
+    <div class="text-light">
+        <p class="lead">Welcome to</p>
+        <h1 class="text-nowrap mb-4">-Security.Easy.Creative-</h1>
         <button class="btn btn-primary">Get Started</button>
     </div>
     <script>

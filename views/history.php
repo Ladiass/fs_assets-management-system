@@ -14,7 +14,10 @@ $title = "History";
                     <td class="text-white">Index</td>
                     <td class="text-white">Item Name</td>
                     <td class="text-white">Time</td>
-                    <td class="text-white">Borrow</td>
+                    <td class="text-white">How much you borrow?</td>
+                        <?php if($_SESSION['user_details']->isAdmin){?>
+                    <td class="text-white">Borrower</td>
+                                            <?php }?>
                     <td class="text-white">Actions</td>
                 </tr>
             </thead>
@@ -33,10 +36,19 @@ $title = "History";
                             <?php echo $asset->itemname; ?>
                         </td>
                         <td class="align-middle " style="border: none;">
-                            
-                            <?php echo $asset->time ?>
+                            <?php echo $asset->time ;
+                            if(isset($asset->returntime)){?>
+                                <div class="returntime bg-success pt-2">
+                                    Return time :<br>
+                                    <?php echo $asset->returntime?>
+                                </div>
+
+                            <?php }?>
                         </td>
+                        <td class="align-middle" style="border: none;"><?php echo $asset->count?></td>
+                        <?php if($_SESSION['user_details']->isAdmin){?>
                         <td class="align-middle " style="border: none;"><?php echo $asset->borrower ?></td>
+                        <?php }?>
                         <td class="d-flex align-items-center justify-content-center" style="border: none;">
                             <?php if($_SESSION["user_details"]->isAdmin){?>
                             <!-- <a class="btn btn-danger" id="user-del" href="/controllers/user.del.php?id=<?php echo $i?>">Delete</a> -->

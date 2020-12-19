@@ -20,7 +20,7 @@
         <div class="card">
           <div class="card-body row">
                 <div class="col-sm-3">
-                    <label for="user_image" class="rounded-circle" style="overflow: hidden;cursor: pointer;">
+                    <label for="user_image" class="text-dark bg-white" style="overflow: hidden;cursor: pointer;border-radius:50%; border:1px solid; max-height:250px;position:relative">
                         <img id="picture" src="<?php echo $_SESSION['user_details']->picture ?>" alt="
                         <?php echo $_SESSION["user_details"]->username?>" width="100%" >
                     </label>
@@ -29,23 +29,23 @@
                 <div class="col-sm-9">
                     <div class="card-body">
                         <div class="row align-items-center">
-                            <h5 class="card-title">Name :</h5>
-                            <p class="ml-5 pt-4"><?php echo $_SESSION["user_details"]->fullname?></p>
+                            <h5 class="card-title text-dark">Name :</h5>
+                            <p class="ml-5 pt-4 text-dark"><?php echo $_SESSION["user_details"]->fullname?></p>
                         </div>
                         <div class="row align-items-center">
-                            <h5 class="card-title">Username :</h5>
-                            <p class="ml-5 pt-4"><?php echo $_SESSION["user_details"]->username?></p>
+                            <h5 class="card-title text-dark">Username :</h5>
+                            <p class="ml-5 pt-4 text-dark"><?php echo $_SESSION["user_details"]->username?></p>
                         </div>
                         <div class="row align-items-center">
-                            <h5 class="card-title">Email :</h5>
-                            <p class="ml-5 pt-4"><?php echo $_SESSION["user_details"]->email?></p>
+                            <h5 class="card-title text-dark">Email :</h5>
+                            <p class="ml-5 pt-4 text-dark"><?php echo $_SESSION["user_details"]->email?></p>
                         </div>
                         <?php
                             if(isset($_SESSION['user_details'])){
                                 ?>
                                 <div class="row align-items-center">
-                                    <h5 class="card-title">Password :</h5>
-                                    <p class="ml-5 pt-4"><?php echo "*******"?></p>
+                                    <h5 class="card-title text-dark">Password :</h5>
+                                    <p class="ml-5 pt-4 text-dark"><?php echo "*******"?></p>
                                 </div>
                                 <?php
                             }

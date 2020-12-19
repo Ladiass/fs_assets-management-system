@@ -60,7 +60,7 @@
         <nav class="navbar navbar-expand-md navbar-light ">
             <div id="page-content-wrapper">
                 <a href="javascript:;" class="btn btn-default btn-bar" id="menu-toggle">
-                    <i class="fa fa-align-justify" aria-hidden="true"></i>
+                    <i class="fa fa-align-justify text-dark" aria-hidden="true"></i>
                 </a>
             </div>
             <button class="navbar-toggler v-hidden" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

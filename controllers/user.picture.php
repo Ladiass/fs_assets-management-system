@@ -18,10 +18,9 @@
         }else{
             // echo "Please upload an image file";
             // die();
+            echo 0;
         }
-    }else{
-        echo 0;
-    }
+    };
     if($new_image && $img_size > 0){
         foreach($users as $i => $user){
             if($user->username == $_SESSION['user_details']->username){

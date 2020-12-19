@@ -34,7 +34,7 @@
 
   </head>
   <body>
-      
+      <div class="bg-image"></div>
   <?php
     include "nav.php";
 
