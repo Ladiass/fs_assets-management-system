@@ -47,7 +47,7 @@
                             <?php echo $asset->name; ?>
                         </td>
                         <td class="align-middle" style="border: none;"><?php echo $asset->quantity; ?></td>
-                        <td class="" style="border: none;">
+                        <td style="border: none;">
                         <?php if(isset($_SESSION['user_details'])){?>
 
                             <div class="d-flex align-items-center justify-content-end">
@@ -66,7 +66,7 @@
                                     }else{
                                         if(!$asset->isActive){
                                         ?>
-                                        <div>
+                                        <div class="idontknow">
                                             <a class="btn btn-success px-3 mx-1" id="active_btn" value="<?php echo $i ?>" <?php if($asset->quantity < 1 ) echo "disabled"?> >Active</a>
                                             <?php
                                             }else{?>

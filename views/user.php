@@ -28,7 +28,7 @@ $title = "Users";
                         <td class="align-middle"><?php echo $asset->username; ?></td>
                         <td class="align-middle d-flex align-items-center">
                             <div style="width: 50px;">
-                                <img src="<?php echo $asset->picture ?>" alt="" width="100%" class="p-2">
+                                <img src="<?php echo $asset->picture ?>" alt="" width="100%" class="p-2" style="border-radius:50%;">
                             </div>
                             <?php echo $asset->fullname ?>
                         </td>
