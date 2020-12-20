@@ -102,6 +102,7 @@
         </table>
     </div>
 </div>
+
 <?php 
     }
     include "views/partials/layout.php";

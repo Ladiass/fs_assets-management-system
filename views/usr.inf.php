@@ -21,7 +21,7 @@
           <div class="card-body row">
                 <div class="col-sm-3">
                     <label for="user_image" class="text-dark bg-white" style="overflow: hidden;cursor: pointer;border-radius:50%; border:1px solid; max-height:250px;position:relative">
-                        <img id="picture" src="<?php echo $_SESSION['user_details']->picture ?>" alt="
+                        <img id="user_picture" src="<?php echo $_SESSION['user_details']->picture ?>" alt="
                         <?php echo $_SESSION["user_details"]->username?>" width="100%" >
                     </label>
                     <input type="file" id="user_image" class="v-hidden" height="1px">
@@ -72,8 +72,8 @@
             if(response != 0){
                 // ev.preventDefault();
                 // console.log(response);
-                $("#picture").attr("src",response);
-                $("#picture").show();
+                $("#user_picture").attr("src", response);
+                $("#user_picture").show();
                 // $(".img__text").hide();
             }else{
                 alert("File not uploaded");
