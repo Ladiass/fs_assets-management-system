@@ -32,5 +32,5 @@
             }
         }
         move_uploaded_file($img_tmpname,"../assets/img/users/".$img_name);
-        echo($location);
+        // echo($location);
     }

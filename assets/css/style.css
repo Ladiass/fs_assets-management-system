@@ -12,11 +12,11 @@ body {
     font-family: sans-serif;
     
 }
-td:hover *{
+tr *{
     color: white;
 }
-td:hover{
-    color: dark!important;
+tbody tr:hover *{
+    color: #000 !important;
 }
 .bg-image{
     z-index: -10;

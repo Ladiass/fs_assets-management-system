@@ -72,8 +72,9 @@
             if(response != 0){
                 // ev.preventDefault();
                 // console.log(response);
-                // $("#user_picture").attr("src", response);
-                location.reload();
+                console.log(response)
+                $("#user_picture").attr("src",response);
+                // location.reload();
                 $("#user_picture").show();
                 // $(".img__text").hide();
             }else{
