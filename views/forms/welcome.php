@@ -22,6 +22,8 @@
 
     <script src="https://kit.fontawesome.com/511217841c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/welcome.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/icon/metro-earth.png" />
+    <title>S.E.C</title>
   </head>
   <body >
     <div class="bg-image"></div>

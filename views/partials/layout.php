@@ -29,6 +29,7 @@
     <script src="https://kit.fontawesome.com/511217841c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/setup.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/icon/metro-earth.png" />
     <script src="/assets/js/main.js" defer></script>
 
 
