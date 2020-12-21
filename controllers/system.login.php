@@ -5,7 +5,7 @@
     $url = "../data/users.json";
     $users = get_user($url);
 
-    $username = $_POST['uname'];
+    $username = htmlspecialchars($_POST['uname']);
     $password = $_POST['pass'];
 
     foreach ($users as $user){

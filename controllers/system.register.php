@@ -4,8 +4,8 @@ include "data.get.php";
 $url = "../data/users.json";
 $users = get_user($url);
 
-$uName = $_POST["runame"];
-$uEmail = $_POST["ruemail"];
+$uName = htmlspecialchars($_POST["runame"]);
+$uEmail = htmlspecialchars($_POST["ruemail"]);
 
 $new_user = true;
 foreach ($users as $user) {
