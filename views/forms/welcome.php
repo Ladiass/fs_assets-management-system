@@ -1,5 +1,5 @@
 <?php
-    setcookie("welcome","true",time()+(86400*30),"/");
+    setcookie("welcome","true",time()+(86400*15),"/");
 ?>
 <!DOCTYPE html>
 <html lang="en">

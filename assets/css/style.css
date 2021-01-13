@@ -15,7 +15,7 @@ body {
 tr *{
     color: white;
 }
-tbody tr:hover td{
+tbody tr:hover td,tbody tr:hover td div{
     color: #000 !important;
     text-shadow: 0 0 1px black;
 }

@@ -63,3 +63,38 @@ You need to create a powerpoint presentation discussing what is your project all
 Must be hosted.
 
 
+Wei Chuan 
+- Design
+- FrontEnd code
+- PowerPoint
+
+Lim 
+- Design
+- BackEnd Code
+- Debug
+
+
+
+
+
+
+当物品为零时 ， 归还时 不自动 active 。
+
+admin 同意 归还时 并且物品在未归还前为 0 弹出 询问 是否重新active 。
+
+必须得到admin 同意才可归还 。同时admin 也可以拒绝 。
+（可自定义同意归还数量，当租借数量不等于归还数量 ，将会显示还有多少为归还）
+
+也可同意归还已损坏但必须进行赔偿，相对 对方也可以重新购买相同物品 进行归还。
+
+(当用户有余账 ，并且超过一定数量将不同意在进行租借，同时也不同意进行删除此用户)
+(用户必须填写租借时间，当超时并且用户未归还物品。此情况达到一定数量，系统将进行征收租金（以天计算），相同余账达到一定数量不同意再次租借（与损害不同，超过一定天数租金将会进行增长（以天计算，大约增长0.05%））) ；
+
+
+给予背景 animation ；
+navbar重新design;
+list可以给予一些effect；
+
+
+******
+网站很卡

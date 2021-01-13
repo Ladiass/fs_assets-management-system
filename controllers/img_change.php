@@ -8,7 +8,7 @@
         $img_name = $_FILES['image']['name'];
         $img_size = $_FILES['image']['size'];
         $img_tmpname = $_FILES['image']['tmp_name'];
-    $location ="/assets/img/cookie-img/".$img_name;
+        $location ="/assets/img/cookie-img/".$img_name;
 
         $img_type = pathinfo($img_name,PATHINFO_EXTENSION);
         if($img_type == "jpg" || $img_type == "svg" ||$img_type == "jpeg" || $img_type == "png" ||$img_type == "gif"){
@@ -24,7 +24,7 @@
 if($new_image && $img_size > 0){
             move_uploaded_file($img_tmpname,"../assets/img/cookie-img/".$img_name);
             echo($location);
-        }
+    }
 
 
 // $filename = $_FILES['image']['name'];

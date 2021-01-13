@@ -20,11 +20,13 @@ $title = "Users";
             </thead>
             <tbody>
                 <?php
+                    $cc = 1;
                     foreach($users as $i => $asset): 
-                        if(strtolower($asset->username) == strtolower("admin")) continue;
+                        if(strtolower($asset->username) == strtolower("admin") || $_SESSION["user_details"]->username == $asset->username) continue;
+                        
                 ?>
                     <tr >
-                        <td class="align-middle"><?php echo $i; ?></td>
+                        <td class="align-middle"><?php echo $cc++; ?></td>
                         <td class="align-middle"><?php echo $asset->username; ?></td>
                         <td class="align-middle d-flex align-items-center">
                             <div style="width: 50px;">
@@ -40,7 +42,7 @@ $title = "Users";
                             }else{
                                 echo "success";
                             }
-                            ?>"  value="<?php echo $i?>" href="/controllers/user.adm.php?id=<?php echo $i?>"><?php 
+                            ?> "  value="<?php echo $i?>" href="/controllers/user.adm.php?id=<?php echo $i?>"><?php 
                                 if($asset->isAdmin){
                                     echo "unAdmin";
                                 }else{
@@ -48,7 +50,7 @@ $title = "Users";
                                 }
                             ?></a>
                             <a class="btn btn-danger" id="user-del" href="/controllers/user.del.php?id=<?php echo $i?>">Remove</a>
-                            <!-- <a class="btn btn-danger"  id="user-brr">Borrow</a> -->
+                            
                         </td>
                     </tr>
                 <?php endforeach; ?>

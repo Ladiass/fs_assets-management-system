@@ -4,7 +4,7 @@
         "count": "22",
         "time": "2020 - 12 - 19 (13:18:05)",
         "image": "\/assets\/img\/Eo4igUYW4As7A2u.jpg",
-        "borrower": "employee",
+        "borrower": "employee", 
         "return": true,
         "returntime": "2020 - 12 - 20 (000328)"
     }

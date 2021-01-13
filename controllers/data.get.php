@@ -17,3 +17,8 @@ function get_history($url){
     $history = json_decode(file_get_contents($url));
     return $history;
 };
+
+function get_data($url){
+    $datas = json_decode(file_get_contents($url));
+    return $datas;
+}
